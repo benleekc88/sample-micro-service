@@ -15,7 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
 
 jar {
-	baseName = 'sample-test'
+	baseName = 'sample-service'
 	version = '0.0.1-SNAPSHOT'
 }
 
@@ -38,4 +38,12 @@ dependencyManagement {
 	imports {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.SR7"
 	}
+}
+
+task bootRunLocal(type: org.springframework.boot.gradle.run.BootRunTask) {
+    doFirst() {
+        main = project.mainClassName
+        classpath = sourceSets.main.runtimeClasspath
+        systemProperty "IS_REMOTE", "false"
+    }
 }

@@ -65,3 +65,11 @@ dependencyManagement {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.SR7"
 	}
 }
+
+task bootRunLocal(type: org.springframework.boot.gradle.run.BootRunTask) {
+    doFirst() {
+        main = project.mainClassName
+        classpath = sourceSets.main.runtimeClasspath
+        systemProperty "IS_REMOTE", "false"
+    }
+}

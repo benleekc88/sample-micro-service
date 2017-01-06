@@ -36,31 +36,35 @@ public class SampleApplication {
 				// default data here
 				Stream.of("Student 1").forEach(s -> studentRepository.save(new Student(s)));
 			}
-			
+
 		};
 	}
-	
+
 	public static void main(String[] args) {
-		//if (!System.getenv("IS_REMOTE").equalsIgnoreCase("true") && !System.getenv("IS_REMOTE").equalsIgnoreCase("yes")) {
-		//	System.setProperty("spring.config.name", "local-application");
-		//}
+		String is_remote = System.getProperty("IS_REMOTE");
+		if (is_remote != null) {
+			if (!System.getProperty("IS_REMOTE").equalsIgnoreCase("true") && !System.getProperty("IS_REMOTE").equalsIgnoreCase("yes")) {
+				System.out.println("LOCAL-APPLICATION.PROPERTIES is loaded.");					
+				System.setProperty("spring.config.name", "local-application");
+			}
+		}
 		SpringApplication.run(SampleApplication.class, args);
 	}
-	
+
 }
 
 @RestController
 @RequestMapping(value="/services")
 class SampleServiceController {
-	
+
 	@Autowired
 	private StudentRepository studentRepository;
-	
+
 	@RequestMapping(method=RequestMethod.GET, value="/students")
 	public Collection<Student> getStudents() {
 		return studentRepository.findAll();
 	}
-	
+
 	@RequestMapping(method=RequestMethod.POST, value="/students")
 	public Collection<Student> writeStudents(@RequestParam(value="name") String name) {
 		studentRepository.save(new Student(name));
@@ -78,13 +82,13 @@ class SampleServiceController {
 		}
 		return message;
 	}
-	
+
 	@RequestMapping(method=RequestMethod.GET, value="/sample")
-	public Map<String, String> sampleData(@RequestParam(value="start", defaultValue="1") int start, 
-			@RequestParam(value="end", defaultValue="10") int end) {		
+	public Map<String, String> sampleData(@RequestParam(value="start", defaultValue="1") int start,
+			@RequestParam(value="end", defaultValue="10") int end) {
 		// function purpose:
 		// generate a list of numbers between start and end
-		
+
 		DecimalFormat formatter = new DecimalFormat("0000");
 		Map<String, String> map = new HashMap<String, String>();
 		for(int i=start; i<=end; i++) {
@@ -92,5 +96,5 @@ class SampleServiceController {
 		}
 		return map;
 	}
-	
+
 }
