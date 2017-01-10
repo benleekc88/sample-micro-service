@@ -1,0 +1,12 @@
+spring.application.name=sample-service
+server.port=${SERVER-PORT}
+eureka.client.register-with-eureka=true
+eureka.client.service-url.defaultZone=http://${EUREKA-HOST}/eureka
+eureka.instance.non-secure-port=80
+eureka.instance.secure-port=443
+eureka.instance.secure-port-enabled=false
+eureka.instance.hostname=${SERVICE-HOST}
+eureka.instance.home-page-url=http://${eureka.instance.hostname}/
+eureka.instance.status-page-url=http://${eureka.instance.hostname}/info
+eureka.instance.health-check-url=http://${eureka.instance.hostname}/health
+eureka.instance.metadata-map.instanceId=${spring.applicaiton.name}:${spring.application.instance_id:${server.port}}

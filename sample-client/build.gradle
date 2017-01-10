@@ -31,7 +31,7 @@ dependencies {
 	
 	// -------- for Binding ---------
 	// wait for actual cloudfoundry environment
-	// compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-stream-rabbit'
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-stream-rabbit'
 	
 	// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-stream-binder-redis
 	//compile group: 'org.springframework.cloud', name: 'spring-cloud-stream-binder-redis', version: '1.0.0.RELEASE'	
@@ -40,9 +40,10 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.hibernate/hibernate-validator-annotation-processor
 	//compile group: 'org.hibernate', name: 'hibernate-validator-annotation-processor', version: '5.0.0.Alpha1'		
 	//// https://mvnrepository.com/artifact/javax.validation/validation-api
-	//compile group: 'javax.validation', name: 'validation-api', version: '1.0.0.GA'	
+	//compile group: 'javax.validation', name: 'validation-api', version: '1.0.0.GA'
+	
 	// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-stream-binder-rabbit
-	//compile group: 'org.springframework.cloud', name: 'spring-cloud-stream-binder-rabbit', version: '1.0.0.RELEASE'
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-stream-binder-rabbit', version: '1.0.0.RELEASE'
 	// -------------------------------
 
 	// -------- fade over use ---------
