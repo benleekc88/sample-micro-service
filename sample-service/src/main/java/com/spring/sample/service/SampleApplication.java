@@ -12,23 +12,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.integration.annotation.IntegrationComponentScan;
-import org.springframework.integration.annotation.MessageEndpoint;
-import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.stream.annotation.EnableBinding;
-import org.springframework.cloud.stream.messaging.Sink;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@EnableBinding(Sink.class)
-@IntegrationComponentScan
 @EnableDiscoveryClient
 @SpringBootApplication
 public class SampleApplication {
@@ -58,19 +51,6 @@ public class SampleApplication {
 		SpringApplication.run(SampleApplication.class, args);
 	}
 
-}
-
-@MessageEndpoint
-class StudentRegistrationEndPointHandler {
-	
-	@Autowired
-	private StudentRepository repo;
-	
-	@ServiceActivator(inputChannel = Sink.INPUT) 
-	public void addStudent(String name) {
-		repo.save(new Student(name));
-	}
-	
 }
 
 @RestController

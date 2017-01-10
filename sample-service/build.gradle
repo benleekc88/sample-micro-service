@@ -27,23 +27,6 @@ repositories {
 
 
 dependencies {
-	// -------- for Binding ---------
-	// wait for actual cloudfoundry environment
-	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-stream-rabbit'
-	
-	// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-stream-binder-redis
-	//compile group: 'org.springframework.cloud', name: 'spring-cloud-stream-binder-redis', version: '1.0.0.RELEASE'	
-	//compile('org.springframework.cloud:spring-cloud-stream')
-	//compile('org.springframework.cloud:spring-cloud-starter-stream-kafka')	
-	// https://mvnrepository.com/artifact/org.hibernate/hibernate-validator-annotation-processor
-	//compile group: 'org.hibernate', name: 'hibernate-validator-annotation-processor', version: '5.0.0.Alpha1'		
-	//// https://mvnrepository.com/artifact/javax.validation/validation-api
-	//compile group: 'javax.validation', name: 'validation-api', version: '1.0.0.GA'
-	
-	// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-stream-binder-rabbit
-	compile group: 'org.springframework.cloud', name: 'spring-cloud-stream-binder-rabbit', version: '1.0.0.RELEASE'
-	// -------------------------------
-
 	compile("org.springframework.boot:spring-boot-starter-data-rest")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("com.h2database:h2")
