@@ -1,0 +1,63 @@
+!SESSION 2017-01-10 15:21:59.389 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/benlee/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/benlee/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.jface 2 0 2017-01-10 15:22:14.011
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-01-10 15:22:14.011
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4ec78008,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ac71bd7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.core.net 1 0 2017-01-10 15:22:14.746
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2017-01-10 15:24:02.549
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin com.vmware.vfabric.ide.eclipse.tcserver.core.
+
+!ENTRY org.eclipse.jpt.jaxb.core 4 0 2017-01-10 15:26:32.188
+!MESSAGE org.eclipse.jpt.common.utility.internal.iterable.IterableTools.cloneLive(Ljava/util/List;)Lorg/eclipse/jpt/common/utility/internal/iterable/LiveCloneListIterable;
+!STACK 0
+java.lang.NoSuchMethodError: org.eclipse.jpt.common.utility.internal.iterable.IterableTools.cloneLive(Ljava/util/List;)Lorg/eclipse/jpt/common/utility/internal/iterable/LiveCloneListIterable;
+	at org.eclipse.jpt.jaxb.core.internal.InternalJaxbProjectManager.getJaxbProjects_(InternalJaxbProjectManager.java:325)
+	at org.eclipse.jpt.jaxb.core.internal.InternalJaxbProjectManager.clearJaxbProjects(InternalJaxbProjectManager.java:307)
+	at org.eclipse.jpt.jaxb.core.internal.InternalJaxbProjectManager.stop_(InternalJaxbProjectManager.java:302)
+	at org.eclipse.jpt.jaxb.core.internal.InternalJaxbProjectManager.stop(InternalJaxbProjectManager.java:286)
+	at org.eclipse.jpt.jaxb.core.internal.InternalJaxbWorkspace.dispose(InternalJaxbWorkspace.java:97)
+	at org.eclipse.jpt.jaxb.core.internal.plugin.JptJaxbCorePlugin.disposeJaxbWorkspaces(JptJaxbCorePlugin.java:96)
+	at org.eclipse.jpt.jaxb.core.internal.plugin.JptJaxbCorePlugin.stop(JptJaxbCorePlugin.java:50)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:955)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:323)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:144)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:159)
+	at java.lang.Thread.run(Thread.java:745)
