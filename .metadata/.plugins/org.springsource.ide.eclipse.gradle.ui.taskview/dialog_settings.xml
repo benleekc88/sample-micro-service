@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.springsource.ide.eclipse.gradle.ui.taskview.GradleTasksView">
+		<item value="sample-service" key="selectedProject"/>
+		<item value="false" key="isLinkingEnabled"/>
+		<item value="false" key="isDisplayProjectLocalTasks"/>
+	</section>
+</section>

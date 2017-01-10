@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.messaging.support.MessageBuilder"/>
+<fullyQualifiedTypeName name="org.springframework.messaging.Message"/>
+<fullyQualifiedTypeName name="org.springframework.cloud.stream.annotation.EnableBinding"/>
+<fullyQualifiedTypeName name="org.springframework.cloud.stream.messaging.Sink"/>
+<fullyQualifiedTypeName name="org.springframework.integration.annotation.IntegrationComponentScan"/>
+<fullyQualifiedTypeName name="org.springframework.integration.annotation.ServiceActivator"/>
+</qualifiedTypeNameHistroy>
