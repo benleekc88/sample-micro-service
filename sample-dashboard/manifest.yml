@@ -10,3 +10,4 @@ applications:
     SPRING_PROFILES_ACTIVE: cloud
     JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
     IS_REMOTE: true
+    SERVER-PORT: 2040
