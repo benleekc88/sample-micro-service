@@ -27,17 +27,6 @@ repositories {
 
 
 dependencies {
-	// -------- fade over use ---------
-	compile('org.springframework.cloud:spring-cloud-starter-hystrix')
-	// --------------------------------
-		
-	//compile('org.springframework.cloud:spring-cloud-starter-zipkin')
-	
-	// -------- rest template ---------
-	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-hateoas
-	compile group: 'org.springframework.boot', name: 'spring-boot-starter-hateoas', version: '1.2.2.RELEASE'
-	// --------------------------------
-	
 	compile('org.springframework.cloud:spring-cloud-starter-zuul')
 	compile('org.springframework.cloud:spring-cloud-starter-eureka')
 	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-stream-rabbit'

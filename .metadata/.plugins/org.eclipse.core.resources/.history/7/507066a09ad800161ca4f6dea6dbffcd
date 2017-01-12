@@ -1,0 +1,5 @@
+package works.service;
+
+public class SampleServiceController {
+
+}
