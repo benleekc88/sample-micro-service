@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: work-dispatcher
+
+server:
+  port: 8080
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        worksChannel:
+          binder: rabbit
+          destination: work.exchange
+          contentType: application/json
+          group: testgroup
