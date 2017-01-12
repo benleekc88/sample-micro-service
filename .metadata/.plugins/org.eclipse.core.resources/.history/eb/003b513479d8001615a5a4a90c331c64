@@ -1,0 +1,7 @@
+package com.spring.sample.edge.client;
+
+@Configuration
+@EnableBinding(WorkUnitsSource.class)
+@IntegrationComponentScan
+public class IntegrationConfiguration {
+}

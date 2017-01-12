@@ -12,5 +12,8 @@
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1484033144919_3" label="sample-dashboard" name="sample-dashboard">
 <item elementID="=sample-dashboard" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1484205172388_5" label="work-dispatcher" name="work-dispatcher">
+<item elementID="=work-dispatcher" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1484120298351_4" label="Window Working Set" name="Aggregate for window 1484120298349"/>
 </workingSetManager>

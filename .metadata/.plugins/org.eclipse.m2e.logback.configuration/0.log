@@ -1,0 +1,231 @@
+2017-01-12 14:53:29,268 [Worker-6] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 0 sec
+2017-01-12 14:53:34,585 [Worker-12] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Failed to read Maven project: 1 problem was encountered while building the effective model for bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT
+[FATAL] Non-resolvable parent POM for bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT: Could not find artifact bk.scstream.sample:spring-cloud-stream-rabbit:pom:1.0-SNAPSHOT and 'parent.relativePath' points at wrong local POM @ line 11, column 10
+ for project bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT at /Users/benlee/Documents/works/pivotal/sample-micro-service/work-dispatcher/pom.xml
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model for bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT
+[FATAL] Non-resolvable parent POM for bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT: Could not find artifact bk.scstream.sample:spring-cloud-stream-rabbit:pom:1.0-SNAPSHOT and 'parent.relativePath' points at wrong local POM @ line 11, column 10
+ for project bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT at /Users/benlee/Documents/works/pivotal/sample-micro-service/work-dispatcher/pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:816) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:967) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:192) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80) [org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259) [org.eclipse.m2e.core.ui_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:732) [org.eclipse.m2e.editor_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1053) [org.eclipse.m2e.editor_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.7.0.v20150330-2103.jar:na]
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT
+[FATAL] Non-resolvable parent POM for bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT: Could not find artifact bk.scstream.sample:spring-cloud-stream-rabbit:pom:1.0-SNAPSHOT and 'parent.relativePath' points at wrong local POM @ line 11, column 10
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197) ~[maven-model-builder-3.3.9.jar:3.3.9]
+	at org.apache.maven.model.building.DefaultModelBuilder.readParentExternally(DefaultModelBuilder.java:1029) ~[maven-model-builder-3.3.9.jar:3.3.9]
+	at org.apache.maven.model.building.DefaultModelBuilder.readParent(DefaultModelBuilder.java:800) ~[maven-model-builder-3.3.9.jar:3.3.9]
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:329) ~[maven-model-builder-3.3.9.jar:3.3.9]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161) ~[maven-core-3.3.9.jar:3.3.9]
+	... 15 common frames omitted
+2017-01-12 14:54:06,225 [Worker-14] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2017-01-12 14:54:06,254 [Worker-14] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2017-01-12 14:54:44,661 [Worker-16] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Failed to read Maven project: 1 problem was encountered while building the effective model for bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT
+[FATAL] Non-resolvable parent POM for bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT: Could not find artifact bk.scstream.sample:spring-cloud-stream-rabbit:pom:1.0-SNAPSHOT and 'parent.relativePath' points at wrong local POM @ line 11, column 10
+ for project bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT at /Users/benlee/Documents/works/pivotal/sample-micro-service/work-dispatcher/pom.xml
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model for bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT
+[FATAL] Non-resolvable parent POM for bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT: Could not find artifact bk.scstream.sample:spring-cloud-stream-rabbit:pom:1.0-SNAPSHOT and 'parent.relativePath' points at wrong local POM @ line 11, column 10
+ for project bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT at /Users/benlee/Documents/works/pivotal/sample-micro-service/work-dispatcher/pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:816) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:967) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:192) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80) [org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259) [org.eclipse.m2e.core.ui_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:732) [org.eclipse.m2e.editor_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1053) [org.eclipse.m2e.editor_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.7.0.v20150330-2103.jar:na]
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT
+[FATAL] Non-resolvable parent POM for bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT: Could not find artifact bk.scstream.sample:spring-cloud-stream-rabbit:pom:1.0-SNAPSHOT and 'parent.relativePath' points at wrong local POM @ line 11, column 10
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197) ~[maven-model-builder-3.3.9.jar:3.3.9]
+	at org.apache.maven.model.building.DefaultModelBuilder.readParentExternally(DefaultModelBuilder.java:1029) ~[maven-model-builder-3.3.9.jar:3.3.9]
+	at org.apache.maven.model.building.DefaultModelBuilder.readParent(DefaultModelBuilder.java:800) ~[maven-model-builder-3.3.9.jar:3.3.9]
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:329) ~[maven-model-builder-3.3.9.jar:3.3.9]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161) ~[maven-core-3.3.9.jar:3.3.9]
+	... 15 common frames omitted
+2017-01-12 14:57:06,702 [Worker-8] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2017-01-12 14:57:08,365 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-maven-plugin/maven-metadata.xml
+2017-01-12 14:57:08,535 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-maven-plugin/maven-metadata.xml
+2017-01-12 14:57:08,712 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-maven-plugin/1.4.3.RELEASE/spring-boot-maven-plugin-1.4.3.RELEASE.pom
+2017-01-12 14:57:08,880 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-maven-plugin/1.4.3.RELEASE/spring-boot-maven-plugin-1.4.3.RELEASE.pom
+2017-01-12 14:57:09,051 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-tools/1.4.3.RELEASE/spring-boot-tools-1.4.3.RELEASE.pom
+2017-01-12 14:57:09,217 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-tools/1.4.3.RELEASE/spring-boot-tools-1.4.3.RELEASE.pom
+2017-01-12 14:57:09,383 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-parent/1.4.3.RELEASE/spring-boot-parent-1.4.3.RELEASE.pom
+2017-01-12 14:57:09,747 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-parent/1.4.3.RELEASE/spring-boot-parent-1.4.3.RELEASE.pom
+2017-01-12 14:57:09,917 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/1.4.3.RELEASE/spring-boot-dependencies-1.4.3.RELEASE.pom
+2017-01-12 14:57:10,342 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/1.4.3.RELEASE/spring-boot-dependencies-1.4.3.RELEASE.pom
+2017-01-12 14:57:10,534 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/4.3.5.RELEASE/spring-framework-bom-4.3.5.RELEASE.pom
+2017-01-12 14:57:10,707 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/4.3.5.RELEASE/spring-framework-bom-4.3.5.RELEASE.pom
+2017-01-12 14:57:10,874 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-releasetrain/Hopper-SR6/spring-data-releasetrain-Hopper-SR6.pom
+2017-01-12 14:57:11,045 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-releasetrain/Hopper-SR6/spring-data-releasetrain-Hopper-SR6.pom
+2017-01-12 14:57:11,212 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/data/build/spring-data-build/1.8.6.RELEASE/spring-data-build-1.8.6.RELEASE.pom
+2017-01-12 14:57:11,388 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/data/build/spring-data-build/1.8.6.RELEASE/spring-data-build-1.8.6.RELEASE.pom
+2017-01-12 14:57:11,554 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/4.3.6.RELEASE/spring-integration-bom-4.3.6.RELEASE.pom
+2017-01-12 14:57:11,747 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/4.3.6.RELEASE/spring-integration-bom-4.3.6.RELEASE.pom
+2017-01-12 14:57:11,914 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/4.1.4.RELEASE/spring-security-bom-4.1.4.RELEASE.pom
+2017-01-12 14:57:12,089 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/4.1.4.RELEASE/spring-security-bom-4.1.4.RELEASE.pom
+2017-01-12 14:57:12,270 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-maven-plugin/1.4.3.RELEASE/spring-boot-maven-plugin-1.4.3.RELEASE.jar
+2017-01-12 14:57:12,654 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-maven-plugin/1.4.3.RELEASE/spring-boot-maven-plugin-1.4.3.RELEASE.jar
+2017-01-12 14:57:13,815 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT @ /Users/benlee/Documents/works/pivotal/sample-micro-service/work-dispatcher/pom.xml.
+2017-01-12 14:57:14,854 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.20/slf4j-api-1.7.20.pom
+2017-01-12 14:57:15,024 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.20/slf4j-api-1.7.20.pom
+2017-01-12 14:57:15,199 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.20/slf4j-parent-1.7.20.pom
+2017-01-12 14:57:15,550 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.20/slf4j-parent-1.7.20.pom
+2017-01-12 14:57:16,117 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.6.0/jackson-annotations-2.6.0.pom
+2017-01-12 14:57:16,286 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.6.0/jackson-annotations-2.6.0.pom
+2017-01-12 14:57:16,517 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.2.1.Final/jboss-logging-3.2.1.Final.pom
+2017-01-12 14:57:16,709 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.2.1.Final/jboss-logging-3.2.1.Final.pom
+2017-01-12 14:57:16,895 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/4.2.6.RELEASE/spring-messaging-4.2.6.RELEASE.pom
+2017-01-12 14:57:17,074 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/4.2.6.RELEASE/spring-messaging-4.2.6.RELEASE.pom
+2017-01-12 14:57:17,247 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-core/4.2.5.RELEASE/spring-integration-core-4.2.5.RELEASE.pom
+2017-01-12 14:57:17,423 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-core/4.2.5.RELEASE/spring-integration-core-4.2.5.RELEASE.pom
+2017-01-12 14:57:17,608 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.2.4.RELEASE/spring-core-4.2.4.RELEASE.pom
+2017-01-12 14:57:17,778 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.2.4.RELEASE/spring-core-4.2.4.RELEASE.pom
+2017-01-12 14:57:17,947 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.2.4.RELEASE/spring-tx-4.2.4.RELEASE.pom
+2017-01-12 14:57:18,118 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.2.4.RELEASE/spring-tx-4.2.4.RELEASE.pom
+2017-01-12 14:57:18,293 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.0.4.RELEASE/spring-core-4.0.4.RELEASE.pom
+2017-01-12 14:57:18,460 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.0.4.RELEASE/spring-core-4.0.4.RELEASE.pom
+2017-01-12 14:57:18,652 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/4.2.4.RELEASE/spring-messaging-4.2.4.RELEASE.pom
+2017-01-12 14:57:18,823 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/4.2.4.RELEASE/spring-messaging-4.2.4.RELEASE.pom
+2017-01-12 14:57:19,012 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-amqp/1.3.5.RELEASE/spring-boot-starter-amqp-1.3.5.RELEASE.pom
+2017-01-12 14:57:19,182 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-amqp/1.3.5.RELEASE/spring-boot-starter-amqp-1.3.5.RELEASE.pom
+2017-01-12 14:57:19,356 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-rabbit/1.5.6.RELEASE/spring-rabbit-1.5.6.RELEASE.pom
+2017-01-12 14:57:19,537 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-rabbit/1.5.6.RELEASE/spring-rabbit-1.5.6.RELEASE.pom
+2017-01-12 14:57:19,706 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/4.2.2.RELEASE/spring-messaging-4.2.2.RELEASE.pom
+2017-01-12 14:57:19,876 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/4.2.2.RELEASE/spring-messaging-4.2.2.RELEASE.pom
+2017-01-12 14:57:20,045 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.2.2.RELEASE/spring-beans-4.2.2.RELEASE.pom
+2017-01-12 14:57:20,214 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.2.2.RELEASE/spring-beans-4.2.2.RELEASE.pom
+2017-01-12 14:57:20,383 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.2.2.RELEASE/spring-core-4.2.2.RELEASE.pom
+2017-01-12 14:57:20,553 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.2.2.RELEASE/spring-core-4.2.2.RELEASE.pom
+2017-01-12 14:57:20,723 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.2.2.RELEASE/spring-context-4.2.2.RELEASE.pom
+2017-01-12 14:57:20,900 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.2.2.RELEASE/spring-context-4.2.2.RELEASE.pom
+2017-01-12 14:57:21,069 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.2.2.RELEASE/spring-aop-4.2.2.RELEASE.pom
+2017-01-12 14:57:21,250 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.2.2.RELEASE/spring-aop-4.2.2.RELEASE.pom
+2017-01-12 14:57:21,419 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.2.2.RELEASE/spring-expression-4.2.2.RELEASE.pom
+2017-01-12 14:57:21,587 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.2.2.RELEASE/spring-expression-4.2.2.RELEASE.pom
+2017-01-12 14:57:21,757 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp/1.5.6.RELEASE/spring-amqp-1.5.6.RELEASE.pom
+2017-01-12 14:57:21,927 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp/1.5.6.RELEASE/spring-amqp-1.5.6.RELEASE.pom
+2017-01-12 14:57:22,096 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.2.2.RELEASE/spring-tx-4.2.2.RELEASE.pom
+2017-01-12 14:57:22,268 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.2.2.RELEASE/spring-tx-4.2.2.RELEASE.pom
+2017-01-12 14:57:22,440 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpclient/4.5/httpclient-4.5.pom
+2017-01-12 14:57:22,629 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpclient/4.5/httpclient-4.5.pom
+2017-01-12 14:57:22,798 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcomponents-client/4.5/httpcomponents-client-4.5.pom
+2017-01-12 14:57:23,018 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcomponents-client/4.5/httpcomponents-client-4.5.pom
+2017-01-12 14:57:23,191 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.pom
+2017-01-12 14:57:23,365 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.pom
+2017-01-12 14:57:23,533 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcomponents-core/4.4.1/httpcomponents-core-4.4.1.pom
+2017-01-12 14:57:23,728 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcomponents-core/4.4.1/httpcomponents-core-4.4.1.pom
+2017-01-12 14:57:23,906 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.5.1/jackson-databind-2.5.1.pom
+2017-01-12 14:57:24,085 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.5.1/jackson-databind-2.5.1.pom
+2017-01-12 14:57:24,252 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.5/jackson-parent-2.5.pom
+2017-01-12 14:57:24,434 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.5/jackson-parent-2.5.pom
+2017-01-12 14:57:24,602 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/18/oss-parent-18.pom
+2017-01-12 14:57:24,812 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/18/oss-parent-18.pom
+2017-01-12 14:57:24,982 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.5.0/jackson-annotations-2.5.0.pom
+2017-01-12 14:57:25,149 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.5.0/jackson-annotations-2.5.0.pom
+2017-01-12 14:57:25,318 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.5.1/jackson-core-2.5.1.pom
+2017-01-12 14:57:25,494 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.5.1/jackson-core-2.5.1.pom
+2017-01-12 14:57:25,663 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.2.2.RELEASE/spring-web-4.2.2.RELEASE.pom
+2017-01-12 14:57:25,849 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.2.2.RELEASE/spring-web-4.2.2.RELEASE.pom
+2017-01-12 14:57:26,018 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/rabbitmq/amqp-client/3.5.7/amqp-client-3.5.7.pom
+2017-01-12 14:57:26,187 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/rabbitmq/amqp-client/3.5.7/amqp-client-3.5.7.pom
+2017-01-12 14:57:26,355 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-amqp/4.2.5.RELEASE/spring-integration-amqp-4.2.5.RELEASE.pom
+2017-01-12 14:57:26,523 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-amqp/4.2.5.RELEASE/spring-integration-amqp-4.2.5.RELEASE.pom
+2017-01-12 14:57:26,694 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-rabbit/1.5.2.RELEASE/spring-rabbit-1.5.2.RELEASE.pom
+2017-01-12 14:57:26,865 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-rabbit/1.5.2.RELEASE/spring-rabbit-1.5.2.RELEASE.pom
+2017-01-12 14:57:27,035 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp/1.5.2.RELEASE/spring-amqp-1.5.2.RELEASE.pom
+2017-01-12 14:57:27,205 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp/1.5.2.RELEASE/spring-amqp-1.5.2.RELEASE.pom
+2017-01-12 14:57:27,374 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/rabbitmq/amqp-client/3.5.6/amqp-client-3.5.6.pom
+2017-01-12 14:57:27,542 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/rabbitmq/amqp-client/3.5.6/amqp-client-3.5.6.pom
+2017-01-12 14:57:27,712 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-jmx/4.2.5.RELEASE/spring-integration-jmx-4.2.5.RELEASE.pom
+2017-01-12 14:57:27,880 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-jmx/4.2.5.RELEASE/spring-integration-jmx-4.2.5.RELEASE.pom
+2017-01-12 14:57:28,069 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-amqp/1.3.5.RELEASE/spring-boot-starter-amqp-1.3.5.RELEASE.jar
+2017-01-12 14:57:28,237 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-amqp/1.3.5.RELEASE/spring-boot-starter-amqp-1.3.5.RELEASE.jar
+2017-01-12 14:57:28,403 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-rabbit/1.5.6.RELEASE/spring-rabbit-1.5.6.RELEASE.jar
+2017-01-12 14:57:29,353 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-rabbit/1.5.6.RELEASE/spring-rabbit-1.5.6.RELEASE.jar
+2017-01-12 14:57:29,536 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp/1.5.6.RELEASE/spring-amqp-1.5.6.RELEASE.jar
+2017-01-12 14:57:29,790 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp/1.5.6.RELEASE/spring-amqp-1.5.6.RELEASE.jar
+2017-01-12 14:57:29,985 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpclient/4.5/httpclient-4.5.jar
+2017-01-12 14:57:31,024 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpclient/4.5/httpclient-4.5.jar
+2017-01-12 14:57:31,208 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar
+2017-01-12 14:57:31,738 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar
+2017-01-12 14:57:31,924 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/rabbitmq/amqp-client/3.5.7/amqp-client-3.5.7.jar
+2017-01-12 14:57:32,613 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/rabbitmq/amqp-client/3.5.7/amqp-client-3.5.7.jar
+2017-01-12 14:57:32,802 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-amqp/4.2.5.RELEASE/spring-integration-amqp-4.2.5.RELEASE.jar
+2017-01-12 14:57:33,036 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-amqp/4.2.5.RELEASE/spring-integration-amqp-4.2.5.RELEASE.jar
+2017-01-12 14:57:33,225 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.20/slf4j-api-1.7.20.jar
+2017-01-12 14:57:33,426 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.20/slf4j-api-1.7.20.jar
+2017-01-12 14:57:33,614 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.2.1.Final/jboss-logging-3.2.1.Final.jar
+2017-01-12 14:57:33,849 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.2.1.Final/jboss-logging-3.2.1.Final.jar
+2017-01-12 14:57:34,038 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-jmx/4.2.5.RELEASE/spring-integration-jmx-4.2.5.RELEASE.jar
+2017-01-12 14:57:34,273 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-jmx/4.2.5.RELEASE/spring-integration-jmx-4.2.5.RELEASE.jar
+2017-01-12 14:57:34,438 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-core/4.2.5.RELEASE/spring-integration-core-4.2.5.RELEASE.jar
+2017-01-12 14:57:38,417 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-core/4.2.5.RELEASE/spring-integration-core-4.2.5.RELEASE.jar
+2017-01-12 14:57:38,584 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.2.4.RELEASE/spring-tx-4.2.4.RELEASE.jar
+2017-01-12 14:57:40,769 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.2.4.RELEASE/spring-tx-4.2.4.RELEASE.jar
+2017-01-12 14:57:40,937 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/4.2.6.RELEASE/spring-messaging-4.2.6.RELEASE.jar
+2017-01-12 14:57:43,545 [Worker-8] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/4.2.6.RELEASE/spring-messaging-4.2.6.RELEASE.jar
+2017-01-12 14:57:43,952 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/4.2.6.RELEASE/spring-messaging-4.2.6.RELEASE.jar
+2017-01-12 14:57:44,656 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/4.2.6.RELEASE/spring-messaging-4.2.6.RELEASE.jar
+2017-01-12 14:57:44,671 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /work-dispatcher/src/main/java
+2017-01-12 14:57:44,673 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /work-dispatcher/src/main/resources
+2017-01-12 14:57:44,676 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /work-dispatcher/src/test/java
+2017-01-12 14:57:45,188 [Worker-8] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 38 sec
+2017-01-12 15:01:58,013 [Worker-16] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: bk.scstream.sample:1.0-SNAPSHOT:1.0-SNAPSHOT @ /Users/benlee/Documents/works/pivotal/sample-micro-service/work-dispatcher/pom.xml.
+2017-01-12 15:02:38,425 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT @ /Users/benlee/Documents/works/pivotal/sample-micro-service/work-dispatcher/pom.xml.
+2017-01-12 15:04:33,491 [Worker-16] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT @ /Users/benlee/Documents/works/pivotal/sample-micro-service/work-dispatcher/pom.xml.
+2017-01-12 15:05:45,625 [Worker-11] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Failed to read Maven project: For artifact {bk.scstream.sample:null:1.0-SNAPSHOT:jar}: The artifactId cannot be empty.
+org.apache.maven.artifact.InvalidArtifactRTException: For artifact {bk.scstream.sample:null:1.0-SNAPSHOT:jar}: The artifactId cannot be empty.
+	at org.apache.maven.artifact.DefaultArtifact.validateIdentity(DefaultArtifact.java:136) ~[maven-artifact-3.3.9.jar:3.3.9]
+	at org.apache.maven.artifact.DefaultArtifact.<init>(DefaultArtifact.java:123) ~[maven-artifact-3.3.9.jar:3.3.9]
+	at org.apache.maven.bridge.MavenRepositorySystem.XcreateArtifact(MavenRepositorySystem.java:564) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.bridge.MavenRepositorySystem.XcreateArtifact(MavenRepositorySystem.java:524) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.bridge.MavenRepositorySystem.XcreateArtifact(MavenRepositorySystem.java:518) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.bridge.MavenRepositorySystem.XcreateArtifact(MavenRepositorySystem.java:476) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.bridge.MavenRepositorySystem.createArtifact(MavenRepositorySystem.java:79) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.project.DefaultProjectBuilder.initProject(DefaultProjectBuilder.java:704) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:176) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:816) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:967) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:192) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80) [org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259) [org.eclipse.m2e.core.ui_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:732) [org.eclipse.m2e.editor_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1053) [org.eclipse.m2e.editor_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.7.0.v20150330-2103.jar:na]
+2017-01-12 15:06:06,273 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT @ /Users/benlee/Documents/works/pivotal/sample-micro-service/work-dispatcher/pom.xml.
+2017-01-12 15:07:57,929 [Worker-4] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2017-01-12 15:07:59,332 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-maven-plugin/maven-metadata.xml
+2017-01-12 15:07:59,498 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-maven-plugin/maven-metadata.xml
+2017-01-12 15:07:59,764 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: bk.scstream.sample:work-dispatcher:1.0-SNAPSHOT @ /Users/benlee/Documents/works/pivotal/sample-micro-service/work-dispatcher/pom.xml.
+2017-01-12 15:08:00,136 [Worker-4] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /work-dispatcher/src/main/java
+2017-01-12 15:08:00,136 [Worker-4] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /work-dispatcher/src/main/resources
+2017-01-12 15:08:00,137 [Worker-4] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /work-dispatcher/src/test/java
+2017-01-12 15:08:00,252 [Worker-4] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec
