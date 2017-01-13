@@ -3131,3 +3131,32 @@ Caused by: org.gradle.process.internal.ExecException: Process 'command '/Library
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:80)
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:61)
 	... 55 more
+
+!ENTRY org.eclipse.jpt.jaxb.core 4 0 2017-01-12 17:25:59.150
+!MESSAGE org.eclipse.jpt.common.utility.internal.iterable.IterableTools.cloneLive(Ljava/util/List;)Lorg/eclipse/jpt/common/utility/internal/iterable/LiveCloneListIterable;
+!STACK 0
+java.lang.NoSuchMethodError: org.eclipse.jpt.common.utility.internal.iterable.IterableTools.cloneLive(Ljava/util/List;)Lorg/eclipse/jpt/common/utility/internal/iterable/LiveCloneListIterable;
+	at org.eclipse.jpt.jaxb.core.internal.InternalJaxbProjectManager.getJaxbProjects_(InternalJaxbProjectManager.java:325)
+	at org.eclipse.jpt.jaxb.core.internal.InternalJaxbProjectManager.clearJaxbProjects(InternalJaxbProjectManager.java:307)
+	at org.eclipse.jpt.jaxb.core.internal.InternalJaxbProjectManager.stop_(InternalJaxbProjectManager.java:302)
+	at org.eclipse.jpt.jaxb.core.internal.InternalJaxbProjectManager.stop(InternalJaxbProjectManager.java:286)
+	at org.eclipse.jpt.jaxb.core.internal.InternalJaxbWorkspace.dispose(InternalJaxbWorkspace.java:97)
+	at org.eclipse.jpt.jaxb.core.internal.plugin.JptJaxbCorePlugin.disposeJaxbWorkspaces(JptJaxbCorePlugin.java:96)
+	at org.eclipse.jpt.jaxb.core.internal.plugin.JptJaxbCorePlugin.stop(JptJaxbCorePlugin.java:50)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:955)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:323)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:144)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:159)
+	at java.lang.Thread.run(Thread.java:745)

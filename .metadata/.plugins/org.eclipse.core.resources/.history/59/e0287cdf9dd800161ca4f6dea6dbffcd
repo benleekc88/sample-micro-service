@@ -1,0 +1,9 @@
+server.port=${PORT:8080}
+spring.application.name=work-dispatcher
+spring.cloud.stream.bindings.worksChannel.binder: rabbit
+spring.cloud.stream.bindings.worksChannel.destination: work.exchange
+spring.cloud.stream.bindings.worksChannel.contentType: application/json
+spring.cloud.stream.bindings.worksChannel.group: testgroup
+
+eureka.client.register-with-eureka: true
+eureka.client.service-url.defaultZone: http://localhost:8761/eureka
