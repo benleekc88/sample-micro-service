@@ -1,18 +1,19 @@
 buildscript {
 	ext {
-		springBootVersion = '1.3.8.RELEASE'
+		springBootVersion = '1.5.3.RELEASE'
 	}
 	repositories {
 		mavenCentral()
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        //classpath("org.cloudfoundry:cf-gradle-plugin:1.0.3")
 	}
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
-apply plugin: 'spring-boot'
+apply plugin: 'org.springframework.boot'
 
 jar {
 	baseName = 'eureka-service'
@@ -25,6 +26,13 @@ repositories {
 	mavenCentral()
 }
 
+ext {
+	springCloudServicesVersion = '1.4.1.RELEASE'
+	springCloudVersion = 'Dalston.RELEASE'
+}
+
+project.group = 'com.manulife.ph.gradmaker.service'
+project.version = '0.0.1.SNAPSHOT'
 
 dependencies {
 	compile('org.springframework.cloud:spring-cloud-starter-eureka')
@@ -34,7 +42,8 @@ dependencies {
 
 dependencyManagement {
 	imports {
-		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.SR7"
+		mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:${springCloudServicesVersion}"
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 	}
 }
 
